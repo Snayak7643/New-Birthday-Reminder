@@ -40,7 +40,8 @@ const List = () => {
         <button
           onClick={() => {
             const intAge = parseInt(age);
-            let nid = peoples[peoples.length - 1].id + 1;
+            let nid =
+              peoples.length >= 1 ? peoples[peoples.length - 1].id + 1 : 1;
             if (!isNaN(intAge) && name !== "") {
               setPeoples([
                 ...peoples,
